@@ -1,0 +1,14 @@
+	{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "es2022",
+    "target": "es2022",
+    "outDir": "./dist/esm"
+  },
+  "include": ["./src"],
+  "exclude": ["./src/*.test.ts"]
+}
+
