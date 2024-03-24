@@ -1,20 +1,3 @@
-import {
-  contains,
-  empty,
-  endsWith,
-  isNumber,
-  matches,
-  max,
-  maxLength,
-  min,
-  minLength,
-  notEmpty,
-  range,
-  rangeLength,
-  startsWith,
-  unique,
-} from "./checks";
-
 export {
   contains,
   empty,
@@ -30,7 +13,7 @@ export {
   rangeLength,
   startsWith,
   unique,
-};
+} from "./checks";
 
 export type Case = {
   cond: boolean;
