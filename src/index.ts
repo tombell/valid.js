@@ -1,3 +1,37 @@
+import {
+  contains,
+  empty,
+  endsWith,
+  isNumber,
+  matches,
+  max,
+  maxLength,
+  min,
+  minLength,
+  notEmpty,
+  range,
+  rangeLength,
+  startsWith,
+  unique,
+} from "./checks";
+
+export {
+  contains,
+  empty,
+  endsWith,
+  isNumber,
+  matches,
+  max,
+  maxLength,
+  min,
+  minLength,
+  notEmpty,
+  range,
+  rangeLength,
+  startsWith,
+  unique,
+};
+
 export type Case = {
   cond: boolean;
   msg: string;
