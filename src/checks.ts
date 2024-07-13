@@ -23,7 +23,7 @@ export const rangeLength = (
 export const matches = (value: string, rx: RegExp): boolean => rx.test(value);
 
 export const isNumber = (value: string): boolean =>
-  !Number.isNaN(parseFloat(value));
+  !Number.isNaN(Number.parseFloat(value));
 
 export const max = <T>(value: T, maxValue: T): boolean => value <= maxValue;
 
