@@ -38,6 +38,18 @@ export const unique = <T>(values: T[]): boolean =>
 export const contains = <T>(value: T, ...list: T[]): boolean =>
   list.includes(value);
 
+export const isDate = (value: string): boolean => {
+  const isoformat =
+    "^\\d{4}-\\d{2}-\\d{2}" + // Match YYYY-MM-DD
+    "((T\\d{2}:\\d{2}(:\\d{2})?)" + // Match THH:mm:ss
+    "(\\.\\d{1,6})?" + // Match .sssss
+    "(Z|(\\+|-)\\d{2}:\\d{2})?)?$"; // Time zone (Z or +hh:mm)
+
+  const regex = new RegExp(isoformat);
+
+  return regex.test(value) && !Number.isNaN(Date.parse(value));
+};
+
 export const isUrl = (value: string): boolean => {
   try {
     const url = new URL(value);

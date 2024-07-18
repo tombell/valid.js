@@ -4,6 +4,7 @@ import {
   contains,
   empty,
   endsWith,
+  isDate,
   isNumber,
   isUrl,
   matches,
@@ -182,6 +183,21 @@ describe("contains", () => {
       expect(contains(value, ...list)).toBe(expected);
     },
   );
+});
+
+describe("isDate", () => {
+  test.each([
+    { value: "", expected: false },
+    { value: "202aana", expected: false },
+    { value: "2024-13-18", expected: false },
+    { value: "2024-03-18", expected: true },
+    { value: "2024-03-18T25:13:00Z", expected: false },
+    { value: "2024-03-18T12:13:00Z", expected: true },
+    { value: "2024-13-18T12:13:00", expected: false },
+    { value: "2024-03-18T12:13:00", expected: true },
+  ])("isDate($value) -> $expected", ({ value, expected }) => {
+    expect(isDate(value)).toBe(expected);
+  });
 });
 
 describe("isUrl", () => {
