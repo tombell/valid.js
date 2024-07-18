@@ -1,6 +1,6 @@
 {
   "name": "@tombell/valid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package for simple validation checks",
   "keywords": ["validation"],
   "author": "Tom Bell <tomb@tomb.io>",
