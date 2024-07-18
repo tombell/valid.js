@@ -5,6 +5,7 @@ import {
   empty,
   endsWith,
   isNumber,
+  isUrl,
   matches,
   max,
   maxLength,
@@ -181,4 +182,18 @@ describe("contains", () => {
       expect(contains(value, ...list)).toBe(expected);
     },
   );
+});
+
+describe("isUrl", () => {
+  test.each([
+    { value: "", expected: false },
+    { value: "202aana", expected: false },
+    { value: "/foo/bar", expected: false },
+    { value: "example.com", expected: false },
+    { value: "http://example.com", expected: true },
+    { value: "https://example.com", expected: true },
+    { value: "ftp://example.com", expected: true },
+  ])("isUrl($value) -> $expected", ({ value, expected }) => {
+    expect(isUrl(value)).toBe(expected);
+  });
 });

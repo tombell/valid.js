@@ -37,3 +37,12 @@ export const unique = <T>(values: T[]): boolean =>
 
 export const contains = <T>(value: T, ...list: T[]): boolean =>
   list.includes(value);
+
+export const isUrl = (value: string): boolean => {
+  try {
+    const url = new URL(value);
+    return url && url.protocol !== "" && url.host !== "";
+  } catch {
+    return false;
+  }
+};
