@@ -1,4 +1,4 @@
-import { expect, test } from "vitest";
+import { expect, test } from "bun:test";
 
 import { Validator } from "./index";
 import { min, minLength, notEmpty } from "./checks";

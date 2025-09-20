@@ -13,8 +13,8 @@
     "dist/"
   ],
   "scripts": {
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
+    "test": "bun test",
+    "coverage": "bun test --coverage",
     "lint": "biome lint --write --no-errors-on-unmatched .",
     "format": "biome format --write --no-errors-on-unmatched .",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
@@ -23,8 +23,6 @@
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
     "@types/bun": "^1.2.22",
-    "@vitest/coverage-v8": "^3.2.4",
-    "typescript": "^5.7.3",
-    "vitest": "^3.2.4"
+    "typescript": "^5.7.3"
   }
 }
