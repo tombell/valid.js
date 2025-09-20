@@ -18,7 +18,7 @@
     "lint": "biome lint --write --no-errors-on-unmatched .",
     "format": "biome format --write --no-errors-on-unmatched .",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "bun run build"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
