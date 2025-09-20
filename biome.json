@@ -1,6 +1,0 @@
-{
-  "formatter": { "indentStyle": "space", "indentWidth": 2 },
-  "linter": {
-    "includes": ["**", "!**/dist/**/*", "!**/coverage/**/*"]
-  }
-}

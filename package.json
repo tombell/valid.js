@@ -17,14 +17,19 @@
     "test": "bun test",
     "coverage": "bun test --coverage",
     "check": "bunx prettier --check .",
-    "lint": "biome lint --write --no-errors-on-unmatched .",
+    "lint": "bunx eslint",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
     "prepublishOnly": "bun run build"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.4",
+    "@eslint/js": "^9.36.0",
     "@types/bun": "^1.2.22",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jiti": "^2.5.1",
     "prettier": "^3.6.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.44.0"
   }
 }
