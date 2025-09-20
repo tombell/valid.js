@@ -18,11 +18,7 @@ export default tseslint.config(
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: [
-            "eslint.config.ts",
-            "prettier.config.js",
-            "src/*.test.ts",
-          ],
+          allowDefaultProject: ["*.ts", "src/*.test.ts"],
         },
         tsconfigRootDir: import.meta.dirname,
       },
