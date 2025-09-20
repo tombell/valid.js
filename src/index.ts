@@ -15,23 +15,19 @@ export {
   unique,
 } from "./checks";
 
-export type Case = {
+export interface Case {
   cond: boolean;
   msg: string;
-};
-
-export type Errors = {
-  [key: string]: string[];
-};
+}
 
 export class Validator {
-  #errors: Errors = {};
+  #errors: Record<string, string[]> = {};
 
   check = (key: string, ...cases: Case[]) => {
-    for (let i = 0; i < cases.length; i += 1) {
-      if (!cases[i].cond) {
+    for (const c of cases) {
+      if (!c.cond) {
         this.#errors[key] ||= [];
-        this.#errors[key].push(cases[i].msg);
+        this.#errors[key].push(c.msg);
       }
     }
   };
@@ -40,7 +36,7 @@ export class Validator {
     return Object.keys(this.#errors).length === 0;
   };
 
-  get errors(): Errors {
+  get errors(): Record<string, string[]> {
     return this.#errors;
   }
 }
