@@ -32,10 +32,10 @@ export const min = <T>(value: T, minValue: T): boolean => minValue <= value;
 export const range = <T>(value: T, minValue: T, maxValue: T): boolean =>
   minValue <= value && value <= maxValue;
 
-export const unique = <T>(values: T[]): boolean =>
+export const unique = <T>(values: readonly T[]): boolean =>
   values.length === new Set(values).size;
 
-export const contains = <T>(value: T, ...list: T[]): boolean =>
+export const contains = <T>(value: T, ...list: readonly T[]): boolean =>
   list.includes(value);
 
 export const isDate = (value: string): boolean => {
