@@ -14,10 +14,11 @@
     "dist/"
   ],
   "scripts": {
-    "test": "bun test",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "check": "prettier --check .",
+    "format": "prettier --write .",
     "coverage": "bun test --coverage",
-    "check": "bunx prettier --check .",
-    "lint": "bunx eslint",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
     "prepublishOnly": "bun run build"
   },
