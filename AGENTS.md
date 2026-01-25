@@ -1,6 +1,7 @@
-# AGENTS.md
+# Agents Guide
 
-This file contains guidelines for agentic coding agents working in this TypeScript validation library repository.
+This repository is a small TypeScript validation helper library. Keep guidance simple and
+consistent with current conventions in the codebase.
 
 ## Development Commands
 
