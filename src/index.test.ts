@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 
-import { Validator } from "./index";
 import { min, minLength, notEmpty } from "./checks";
+import { Validator } from "./index";
 
 test("when valid", () => {
   const age = 21;

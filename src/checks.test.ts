@@ -36,12 +36,9 @@ test.each([
 test.each([
   { value: "hello world", prefix: "hello", expected: true },
   { value: "hello world", prefix: "Hello", expected: false },
-])(
-  "startsWith($value, $prefix) -> $expected",
-  ({ value, prefix, expected }) => {
-    expect(startsWith(value, prefix)).toBe(expected);
-  },
-);
+])("startsWith($value, $prefix) -> $expected", ({ value, prefix, expected }) => {
+  expect(startsWith(value, prefix)).toBe(expected);
+});
 
 test.each([
   { value: "hello world", suffix: "world", expected: true },
@@ -54,23 +51,17 @@ test.each([
   { value: "asdf", maxValue: 5, expected: true },
   { value: "asdf", maxValue: 4, expected: true },
   { value: "hello world", maxValue: 6, expected: false },
-])(
-  "maxLength($value, $maxValue) -> $expected",
-  ({ value, maxValue, expected }) => {
-    expect(maxLength(value, maxValue)).toBe(expected);
-  },
-);
+])("maxLength($value, $maxValue) -> $expected", ({ value, maxValue, expected }) => {
+  expect(maxLength(value, maxValue)).toBe(expected);
+});
 
 test.each([
   { value: "asdf", minValue: 5, expected: false },
   { value: "asdf", minValue: 4, expected: true },
   { value: "hello world", minValue: 6, expected: true },
-])(
-  "minLength($value, $minValue) -> $expected",
-  ({ value, minValue, expected }) => {
-    expect(minLength(value, minValue)).toBe(expected);
-  },
-);
+])("minLength($value, $minValue) -> $expected", ({ value, minValue, expected }) => {
+  expect(minLength(value, minValue)).toBe(expected);
+});
 
 test.each([
   { value: "asd", minValue: 1, maxValue: 4, expected: true },
@@ -157,32 +148,23 @@ describe("contains", () => {
   test.each([
     { value: 1, list: [1, 2, 30, -4, 1.1], expected: true },
     { value: 100, list: [1, 1, 30, -4, -1.1], expected: false },
-  ])(
-    "contains<number>($value, $list) -> $expected",
-    ({ value, list, expected }) => {
-      expect(contains(value, ...list)).toBe(expected);
-    },
-  );
+  ])("contains<number>($value, $list) -> $expected", ({ value, list, expected }) => {
+    expect(contains(value, ...list)).toBe(expected);
+  });
 
   test.each([
     { value: "one", list: ["one", "two", "three"], expected: true },
     { value: "four", list: ["three", "one", "two", "three"], expected: false },
-  ])(
-    "contains<string>($value, $list) -> $expected",
-    ({ value, list, expected }) => {
-      expect(contains(value, ...list)).toBe(expected);
-    },
-  );
+  ])("contains<string>($value, $list) -> $expected", ({ value, list, expected }) => {
+    expect(contains(value, ...list)).toBe(expected);
+  });
 
   test.each([
     { value: true, list: [true, false], expected: true },
     { value: false, list: [true, true], expected: false },
-  ])(
-    "contains<boolean>($value, $list) -> $expected",
-    ({ value, list, expected }) => {
-      expect(contains(value, ...list)).toBe(expected);
-    },
-  );
+  ])("contains<boolean>($value, $list) -> $expected", ({ value, list, expected }) => {
+    expect(contains(value, ...list)).toBe(expected);
+  });
 });
 
 describe("isDate", () => {
