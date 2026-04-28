@@ -1,5 +1,4 @@
 import js from "@eslint/js";
-import prettierRecommended from "eslint-plugin-prettier/recommended";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
@@ -11,8 +10,6 @@ export default tseslint.config(
 
   tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-
-  prettierRecommended,
 
   {
     languageOptions: {
