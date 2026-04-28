@@ -2,10 +2,11 @@
   "compilerOptions": {
     "strict": true,
     "declaration": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "module": "es2022",
     "target": "es2022",
+    "rootDir": "./src",
     "outDir": "./dist/esm"
   },
   "include": ["./src"],
