@@ -18,14 +18,17 @@
     "lint:fix": "oxlint . --fix",
     "fmt:check": "oxfmt --check .",
     "fmt": "oxfmt",
-    "coverage": "bun test --coverage",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
     "prepublishOnly": "bun run build"
   },
   "devDependencies": {
-    "@types/bun": "^1.3.13",
+    "@vitest/coverage-v8": "^4.0.14",
     "oxfmt": "^0.47.0",
     "oxlint": "^1.58.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^4.0.14"
   }
 }
